@@ -102,7 +102,7 @@ def create_feature_set(df, float_cols):
     final (pandas dataframe): Final set of features 
     '''
     
-    # Tfidf genre lists
+    # Tfidf genre lists(term frequency–inverse document frequency)
     tfidf = TfidfVectorizer()
     tfidf_matrix =  tfidf.fit_transform(df['genres'].apply(lambda x: " ".join(x)))
     genre_df = pd.DataFrame(tfidf_matrix.toarray())

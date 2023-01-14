@@ -25,11 +25,9 @@ def get_songdf(playlist_link:str):
     track_uris = [x["track"]["uri"] for x in sp.playlist_tracks(playlist_URI)["items"]]
 
     playlist_tracks_id=[]
-        
     #Track name
     track_name = []
-        
-        
+    
     #Name, popularity, genre
     artist_name = []
     artist_pop = []
@@ -40,7 +38,7 @@ def get_songdf(playlist_link:str):
         
     #Popularity of the track
     track_pop=[]
-    print("lotf")
+    
     for track in sp.playlist_tracks(playlist_URI)["items"]:
         #URI
         # track_uri.append(track["track"]["uri"])
